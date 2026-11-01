@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head></head>
+    <body>
+        <header></header>
+        <script src="popup.js"></script>
+        {% block index %} {% endblock  %}
+        <footer></footer>
+        {% with messages=get_flashed_messages() %}
+            {% if messages %}
+                <ul class="flashes">
+                    {% for message in messages %}
+                        <li>{{message}}</li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+        {% endwith %}
+    
+       
+    </body>
+
+    
+</html>
